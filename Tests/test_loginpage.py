@@ -8,10 +8,8 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 class Test_Login(unittest.TestCase):
 
     def setUp(self):
-        options = Options()
-        options.add_argument('--allow-running-insecure-content')
-        options.add_argument('--ignore-certificate-errors')
-        self.driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
+
+        self.driver = webdriver.Chrome(ChromeDriverManager().install())
         self.driver.implicitly_wait(30)
         self.base_url = "https://jgtest.immigrationforms.net/"
         self.driver.maximize_window()
